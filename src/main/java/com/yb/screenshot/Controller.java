@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 @RestController
 public class Controller {
 
@@ -26,6 +28,7 @@ public class Controller {
 
 	private byte[] file(String url) {
 //		System.setProperty("webdriver.chrome.driver", "geckodriver");
+		WebDriverManager.firefoxdriver().setup();
 		FirefoxOptions options = new FirefoxOptions();
 		options.addArguments("--headless");
 		options.addArguments("--start-maximized");
