@@ -25,7 +25,7 @@ public class Controller {
 	}
 
 	private byte[] file(String url) {
-		System.setProperty("webdriver.chrome.driver", "geckodriver");
+//		System.setProperty("webdriver.chrome.driver", "geckodriver");
 		FirefoxOptions options = new FirefoxOptions();
 		options.addArguments("--headless");
 		options.addArguments("--start-maximized");
